@@ -22,6 +22,12 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
     Returns:
         float: The result of the operation.
     """
+    while True:
+        try:
+            number = float(input(prompt))
+            return number
+        except ValueError:
+            print("invalid input. Please enter a valid number.")
 
     if operation == "add":
         return num1 + num2
